@@ -21,7 +21,7 @@ export default function Banner() {
         Math.floor(Math.random() * request.data.results.length)
       ].id;
 
-    // 틀정 영화의 더 상세한 정보를 가져오기
+    // 특정 영화의 더 상세한 정보를 가져오기
     const { data: movieDetail } = await axios.get(`movie/${movieId}`, {
       // data를 movieDetail에 저장한다.
       params: { append_to_response: "videos" }, // 받아오는 응답에 비디오도 같이 달라
@@ -33,7 +33,7 @@ export default function Banner() {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   };
 
-  console.log("movie", movie);
+  //   console.log("movie", movie);
 
   if (!isClicked) {
     return (
