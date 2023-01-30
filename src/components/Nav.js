@@ -6,7 +6,7 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 60) {
         setShow(true);
       } else {
         setShow(false);
